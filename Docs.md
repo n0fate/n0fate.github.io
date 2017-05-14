@@ -18,7 +18,7 @@ title: Docs
 | 2015.08.22 | 맥 키체인 포렌식 분석 |  F-Insight Open Seminar 2015 | [Download](https://github.com/n0fate/contents/blob/master/FIOS-2015-OS-X-Keychain-Forensic-Artifacts.pdf) |
 | 2015.07.18 | iCloud Keychain Forensics | Forensic Insight (Offline) | [Download]() |
 | 2015.04.15 | The Animal Farm | Forensic Insight (Offline) | - |
-| 2014.11.29 | DTrace를 이용한 바이너리 분석 |  CodeEngn Conference 11 | [![pdficon]({{ site.baseurl }}/assets/pdficon-150x150.png)](https://forensic.n0fate.com/wp-content/uploads/2012/07/DTrace를-이용한-바이너리-분석.pdf) |
+| 2014.11.29 | DTrace를 이용한 바이너리 분석 |  CodeEngn Conference 11 | [Download](https://github.com/n0fate/contents/blob/master/DTrace를%20이용한%20바이너리%20분석.pdf) |
 | 2014.10.31 | Forensic artifacts for Yosemite – Call history and SMS analysis | Forensic Insight (Offline) | [Download](https://github.com/n0fate/contents/blob/master/Forensic-artifacts-for-OS-X-YosemiteENG.pdf) |
 | 2014.09.05 | 사이버전 악성코드 특징 | 국방부 | - |
 | 2014.08.26 | Mac OS X 디지털 포렌식 분석 기법 | ITL CSS 2014 | [Download](https://github.com/n0fate/contents/blob/master/Mac-OS-X-digital-forensic-analysis-technique.pdf) |
@@ -26,11 +26,11 @@ title: Docs
 | 2014.06.25 | WAL(Write-Ahead Logging) 분석 기법 | Forensic Insight (Offline) | - |
 | 2014.04.26 | Duqu의 탐지 회피 기술 분석을 통한 APT 악성코드의 특징 파악 | Forensic Insight (Offline) | - |
 | 2014.04.07 | Malware analysis using Dynamic Trace Framework | Forensic Insight (Offline) | [Download](https://github.com/F-INSIGHT/Slides/blob/master/FITALK/2014/(140407)%20%23FITALK%20-%20DTrace를%20이용한%20악성코드%20동적%20분석.pdf) |
-| 2013.12.06 | 2013 디지털 포렌식 기술동향2 | 국방부 | [![pdficon]({{ site.baseurl }}/assets/pdficon-150x150.png)](https://forensic.n0fate.com/wp-content/uploads/2015/08/2013-12-06-디지털-포렌식-기술-동향-제출본2.pdf) |
+| 2013.12.06 | 2013 디지털 포렌식 기술동향2 | 국방부 | [Download](https://github.com/n0fate/contents/blob/master/2013-12-06%20디지털%20포렌식%20기술%20동향%20제출본2.pdf) |
 | 2013.11.16 | Extracting typing history in Unix Memory Image | Forensic Insight (Offline) | [Download](https://github.com/n0fate/contents/blob/master/Extracting-typing-history-in-Unix-Memory-Image.pdf) |
 | 2013.10.04 | Hunting Mac OS X rootkit with memory forensics | Virus Bulletin 2013 | [Download](https://github.com/n0fate/contents/blob/master/Hunting-Mac-OS-X-rootkit-with-Memory-Forensics.pdf) |
 | 2013.09.18 | Cloud Storage Forensics – Dropbox | Forensic Insight (Offline) | [Download](https://github.com/F-INSIGHT/Slides/blob/master/FITALK/2013/(130928)%20%23FITALK%20-%20Cloud%20Storage%20Forensics%20-%20Dropbox.pdf) |
-| 2013.09.06 | 2013 디지털 포렌식 기술동향 | 국방부 | [![pdficon]({{ site.baseurl }}/assets/pdficon-150x150.png)](https://forensic.n0fate.com/wp-content/uploads/2015/08/2013-08-19-디지털-포렌식-기술-동향-제출본.pdf) |
+| 2013.09.06 | 2013 디지털 포렌식 기술동향 | 국방부 | [Download](https://github.com/n0fate/contents/blob/master/2013-09-04%20디지털%20포렌식%20기술%20동향%20제출본.pdf) |
 | 2013.06.22 | iCloud Keychain Forensics | Forensic Insight (Offline) | [Download](https://github.com/n0fate/contents/blob/master/iCloud%20Keychain%20Forensics.pdf) |
 | 2013.04.29 | Keychain analysis with Memory Forensics | - | [Download](https://github.com/n0fate/contents/blob/master/Keychain-Analysis-with-Mac-OS-X-Memory-Forensics.pdf) |
 | 2013.04.04 | Breaking the keychain from digital forensic perspective | Codegate 2013 | [Download](https://github.com/n0fate/contents/blob/master/Breaking-the-keychain-from-digital-forensic-perspective.pdf) |
@@ -45,7 +45,7 @@ title: Docs
 | 2011.8. | Mac OS X 물리 메모리 분석에 관한 연구 | 정보보호학회 논문지 21(4) | - |
 | 2011.04.05 | 문제 풀이 발표(Forensics 500) | Codegate 2011 | - |
 | 2011.02.08 | Memory forensics for FreeBSD | - | [Download](https://github.com/n0fate/contents/blob/master/Memory-forensics-for-FreeBSD.pdf) |
-| 2010.10.30 | Volafox - Finding treasure in your memory | - | [Download](https://volafox.googlecode.com/files/volafox_finding%20treasure%20in%20your%20memory.pdf) |
+| 2010.10.30 | Volafox - Finding treasure in your memory | - | [Download](https://github.com/n0fate/contents/blob/master/volafox_finding%20treasure%20in%20your%20memory.pdf) |
 | 2010.06.24 | Smartphone Forensics | International Cyber Defense Workshop (ICDW) | - |
 | 2010.01.29 | 디지털 포렌식 관점에서 사용자 활동 내역 통합 분석의 필요성 | KoreaCrypt 2010 | - |
 | 2009.12.05 | 가상화 이미지 파일 분석을 통한 디지털 증거 수집 방안 | 2009 한국정보보호학회 동계학술대회 | - |
