@@ -45,7 +45,7 @@ title: Docs
 | 2011.8. | Mac OS X 물리 메모리 분석에 관한 연구 | 정보보호학회 논문지 21(4) | - |
 | 2011.04.05 | 문제 풀이 발표(Forensics 500) | Codegate 2011 | - |
 | 2011.02.08 | Memory forensics for FreeBSD | - | [Download](https://github.com/n0fate/contents/blob/master/Memory-forensics-for-FreeBSD.pdf) |
-| 2010.10.30 | Volafox - Finding treasure in your memory | - | [Download](https://github.com/n0fate/contents/blob/master/volafox_finding%20treasure%20in%20your%20memory.pdf) |
+| 2010.10.30 | Volafox - Finding treasure in your memory | 경찰수사연수원 | [Download](https://github.com/n0fate/contents/blob/master/volafox_finding%20treasure%20in%20your%20memory.pdf) |
 | 2010.06.24 | Smartphone Forensics | International Cyber Defense Workshop (ICDW) | - |
 | 2010.01.29 | 디지털 포렌식 관점에서 사용자 활동 내역 통합 분석의 필요성 | KoreaCrypt 2010 | - |
 | 2009.12.05 | 가상화 이미지 파일 분석을 통한 디지털 증거 수집 방안 | 2009 한국정보보호학회 동계학술대회 | - |
