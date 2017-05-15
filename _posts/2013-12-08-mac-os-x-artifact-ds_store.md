@@ -109,16 +109,9 @@ use Mac::PropertyList::WriteBinary qw ( );
 ....[SNIP]...
 
     &makeEntries("Google x{1103}x{1173}x{1105}x{1161}x{110b}x{1175}x{1107}x{1173}",
-        bwsp => Mac::PropertyList::WriteBinary::as_string(bless( {
-         "ShowSidebar" => bless( do{(my $o = "true")}, 'Mac::PropertyList::true' ),
-         "ShowStatusBar" => bless( do{(my $o = "false")}, 'Mac::PropertyList::false' ),
-         "ShowTabView" => $VAR1->{"ShowStatusBar"},
-         "WindowBounds" => bless( do{(my $o = "{{658, 205}, {770, 438}}")}, 'Mac::PropertyList::string' ),
-         "SidebarWidth" => bless( do{(my $o = 145)}, 'Mac::PropertyList::integer' ),
-         "ShowToolbar" => $VAR1->{"ShowSidebar"},
-         "ShowPathbar" => $VAR1->{"ShowStatusBar"},
-         "ContainerShowSidebar" => $VAR1->{"ShowSidebar"}
-       }, 'Mac::PropertyList::dict' )),
+
+...[SNIP]...
+
         lg1S => 113674640,
         moDD => "226647880368128",
         modD => "226647880368128",
