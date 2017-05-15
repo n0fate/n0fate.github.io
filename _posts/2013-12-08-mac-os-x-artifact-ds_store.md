@@ -29,8 +29,6 @@ drwx------    8 n0fate  staff          272 Dec  7 18:46 .Trash
 
 [![Screen Shot 2013-12-08 at 10.50.12]({{ site.baseurl }}/assets/Screen-Shot-2013-12-08-at-10.50.12.png)](http://forensic.n0fate.com/wp-content/uploads/2013/12/Screen-Shot-2013-12-08-at-10.50.12.png)
 
-**Figure 1\. DS_Store Structure **
-
  DS_Store 파일은 B-Tree(Binary Tree) 구조로 데이터를 유지한다. 각각의 레코드를 노드로 관리하고 있으며 Root, non-leaf, Leaf 노드로 나눠서 관리한다. 각 레코드에는 UTF-16포맷의 파일/폴더 명과 저장할 구조체 정보와 데이터 타입이 저장된다.
 
 Structure ID는 해당 레코드가 어떠한 구조체가 저장되는지에 대한 정보를 가진다. 해당 폴더에 배경을 저장하거나, 아이콘 설정 또는 아이콘의 위치 정보, 해당 폴더를 열었을 때의 파인더 위치, View(List, Detail 등) 정보 등이 있다. 이러한 정보 외에도 논리 및 물리적 파일 크기, 스팟라이트의 코멘트(Spotlight Comments)가 있다. 각각의 정보는 4개의 문자로 이루어진 'FourCharCode'로 구성된다. 예를 들면, 배경 설정과 관련된 데이터가 저장되어 있다면 'BKGD'라는 4개의 문자로 표현한다. 현재까지 알려진 구조체 종류는 다음과 같다.
@@ -88,90 +86,47 @@ DS_Store에는 총 3개의 예제 파일이 있으며, 이 중 DS_Store를 perl 
 
 ```bash
 n0fate@n0fate-MacBook-Air: ~$ cd Mac-Finder-DSStore-1.00
-
 n0fate@n0fate-MacBook-Air: ~/Mac-Finder-DSStore-1.00$ cd examples/
-
 n0fate@n0fate-MacBook-Air: ~/Mac-Finder-DSStore-1.00/examples$ perl dsstore_dump.pl 
-
 Usage: dsstore_dump.pl [options] /path/to/.DS_Store > result.pl
-
 --raw-aliases Do not interpret alias data
-
 --resolve-aliases Resolve aliases to filenames using Mac OS calls
-
 --parse-aliases Parse aliases using Mac::Alias::Parse
-
 --raw-plists Do not interpret bplist data
-
 --parse-plists Parse bplists using Mac::PropertyList
-
- 
-
-The default alias handling is --resolve-aliases, but this requires
-
-the Mac::Files module to be installed.
-
-n0fate@n0fate-MacBook-Air: ~/Mac-Finder-DSStore-1.00/examples$
-
+...
 n0fate@n0fate-MacBook-Air: ~/Mac-Finder-DSStore-1.00/examples$ perl dsstore_dump.pl --parse-plists ~/.DS_Store 
-
-#!/usr/bin/perl -w
-
- 
-
+\#!/usr/bin/perl -w
 use Mac::Finder::DSStore qw( writeDSDBEntries makeEntries );
-
 use Mac::PropertyList::WriteBinary qw ( );
-
 &writeDSDBEntries("/Users/n0fate/.DS_Store",
-
     &makeEntries(".",
-
         bwsp => Mac::PropertyList::WriteBinary::as_string(bless( {
-
          "ShowSidebar" => bless( do{(my $o = "true")}, 'Mac::PropertyList::true' ),
-
          "ShowStatusBar" => bless( do{(my $o = "false")}, 'Mac::PropertyList::false' ),
-
          "ShowTabView" => $VAR1->{"ShowStatusBar"},
 
 ....[SNIP]...
 
     &makeEntries("Google x{1103}x{1173}x{1105}x{1161}x{110b}x{1175}x{1107}x{1173}",
-
         bwsp => Mac::PropertyList::WriteBinary::as_string(bless( {
-
          "ShowSidebar" => bless( do{(my $o = "true")}, 'Mac::PropertyList::true' ),
-
          "ShowStatusBar" => bless( do{(my $o = "false")}, 'Mac::PropertyList::false' ),
-
          "ShowTabView" => $VAR1->{"ShowStatusBar"},
-
          "WindowBounds" => bless( do{(my $o = "{{658, 205}, {770, 438}}")}, 'Mac::PropertyList::string' ),
-
          "SidebarWidth" => bless( do{(my $o = 145)}, 'Mac::PropertyList::integer' ),
-
          "ShowToolbar" => $VAR1->{"ShowSidebar"},
-
          "ShowPathbar" => $VAR1->{"ShowStatusBar"},
-
          "ContainerShowSidebar" => $VAR1->{"ShowSidebar"}
-
        }, 'Mac::PropertyList::dict' )),
-
         lg1S => 113674640,
-
         moDD => "226647880368128",
-
         modD => "226647880368128",
-
         ph1S => 113762304,
-
         vSrn => 1,
-
         vstl => "clmv"
-
 ...
+
 ```
 
 위와 같이 파일이 정상적으로 분석되었으며, Plist까지 올바르게 출력하는 모습을 볼 수 있다. 단, 아직 분석가가 보기엔 깔끔한 구조가 아니다. 시간정보는 추출한 시간 값을 1초에 대한 interval인 65536으로 나눈 후에 HFS+ 파일시스템의 시간 정보와 동일하게 분석한다. 예를 들어 위 코드에서 'Google 드라이브' 폴더의 경우에는 다음과 같이 계산된다.
