@@ -9,8 +9,6 @@ author: login: n0fate email: rapfer@gmail.com display_name: n0fate first_name: '
 ## 스테이지 1
 일단 사이트에 접속하면 `index.html` 페이지가 당신을 반김. 이 페이지는 특별한건 없고 접속한 클라이언트 정보를 수집해 통계 정보를제공하는 구글 애널리틱스(google analytics) 코드가 있고, 아래는 웹 브라우저의 사용자 에이전트 정보를 찾아 운영체제 버전을 식별, 리다이렉션 함.
 
-<div class="highlighter-rouge">
-
 ```javascript
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -36,7 +34,6 @@ author: login: n0fate email: rapfer@gmail.com display_name: n0fate first_name: '
 일단 `10.html`은 다음과 같음.
 
 ```html
-<div class="highlighter-rouge">
 
 	Warning Safari Crashed!!
 	 Your Apple Device May Have Adware/Spyware Virus.
@@ -52,15 +49,12 @@ Your credit card details and banking information.Your e-mail passwords and other
 Your private photos, family photos and other sensitive files.Your webcam could be accessed remotely by stalkers with a VPN virus.
 </font>
 
-</div>
 ```
 
 사파리에 출력하는 메시지. 영어 잘 못하는 내가 봐도 문법이 이상함. 여튼 해킹 당했음이라는 메시지인데 이걸 나중에 메일 제목에도 넣음. 아래는 애플 메일 앱을 띄우는 스크립트 코드임.
 
 ```html
-<div class="highlighter-rouge">
 	jQuery('#result').append('');
-</div>
 ```
 
 RFC2638와 [애플 가이드라인](https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/MailLinks/MailLinks.html)을 준수한 코드임. 내용은 다음과 같음.
@@ -73,7 +67,6 @@ RFC2638와 [애플 가이드라인](https://developer.apple.com/library/content/
 그냥 이것만 띄우는 것이면 DoS가 아니지. 이걸 10만번 띄우는 스크립트 코드는 아래에 있음.
 
 ```html
-<div class="highlighter-rouge">
 	 document.querySelector('a').click(0);
 
 	 for(var i=0;i<100000;i++){
@@ -89,7 +82,6 @@ RFC2638와 [애플 가이드라인](https://developer.apple.com/library/content/
 	    for(var x=0;x<100000;x++){
 		 console.log();
 	}
-</div>
 ```
 
 메일 보내는 창을 10만번 출력함. 악성코드 걸려서 정보 다털리는건 아니지만 걸리면 짜증날 듯. 시에라 가장 최근버전인 10.12.2에서 확인해보니 경고창을 보여주는 것으로 처리함. (위 링크에 스크린샷 있음). 아이폰에서는 무한로딩.
