@@ -1,5 +1,7 @@
---- layout: post title: Scam Page triggers DoS attack on some apple product(?) date: 2017-01-08 14:47:36.000000000 +09:00 type: post published: true status: publish categories: - Malware Analysis tags: []
-author: login: n0fate email: rapfer@gmail.com display_name: n0fate first_name: '' last_name: '' ---
+---
+layout: post title: Scam Page triggers DoS attack on some apple product(?) date: 2017-01-08 14:47:36.000000000 +09:00 type: post published: true status: publish categories: - Malware Analysis tags: []
+author: login: n0fate email: rapfer@gmail.com display_name: n0fate first_name: '' last_name: ''
+---
 
 *딱히 쓸만한 제목이 없어서 제목은 원 글 내용을 따옴*
 
