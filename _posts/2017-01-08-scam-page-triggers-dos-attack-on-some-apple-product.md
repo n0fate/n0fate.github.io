@@ -102,9 +102,7 @@ RFC2638와 [애플 가이드라인](https://developer.apple.com/library/content/
 ### OS 10.1.1 인 경우(ex. iOS 10.1.1)
 10.1.1 버전인 경우 아이튠즈를 이용함. 핵심 내용은 다음과 같음.
 
-<div class="highlighter-rouge">
-
-```
+```javascript
 
 	jQuery('#result').append('.');
 	document.querySelector('a').click();
@@ -117,9 +115,7 @@ RFC2638와 [애플 가이드라인](https://developer.apple.com/library/content/
 
 ```
 
-</div>
-
-핵심은 저 `itunes:문자열(단순한 hello임)`인데 맥에서 테스트해보면 아이튠즈를 한번만 띄움. 아이튠즈 앱 자체가 여러개 뜨는 구조가 아니기 때문인 듯.
+핵심은 `itunes:문자열(단순한 hello임)`인데 맥에서 테스트해보면 아이튠즈를 한번만 띄움. 아이튠즈 앱 자체가 여러개 뜨는 구조가 아니기 때문인 듯.
 아이폰의 경우에는 에러 메시지를 계속 발생시켜서 사파리를 사용불능 상태로 만듬. 문제를 해결하려면 단순히 사파리앱을 껐다가 키는 걸론 안되고, 설정->사파리-> `방문 기록 및 웹 사이트 데이터 지우기`를 선택해서 사파리 내역을 완전 삭제해야 함.
 
 ### 추가
