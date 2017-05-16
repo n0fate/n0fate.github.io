@@ -5,7 +5,8 @@ date: 2017-01-08 14:47:36.000000000 +09:00
 type: post
 published: true
 status: publish
-categories: - Malware Analysis
+categories:
+- Malware Analysis
 tags: []
 author:
   login: n0fate
