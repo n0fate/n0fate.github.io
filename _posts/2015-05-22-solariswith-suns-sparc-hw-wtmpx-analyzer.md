@@ -134,7 +134,7 @@ author:
 <p>솔라리스는 ‘/var/adm/utmpx or wtmpx’에 기록하며, 헤더 정보는 <a href="https://java.net/projects/solaris/sources/on-src/content/usr/src/head/utmp.h?rev=13149" target="_blank">Solaris Development Portal</a>에서 확인할 수 있다.</p>
 <pre><code>
 struct futmpx {
-    char ut_user[fusion_builder_container hundred_percent="yes" overflow="visible"][fusion_builder_row][fusion_builder_column type="1_1" background_position="left top" background_color="" border_size="" border_color="" border_style="solid" spacing="yes" background_image="" background_repeat="no-repeat" padding="" margin_top="0px" margin_bottom="0px" class="" id="" animation_type="" animation_speed="0.3" animation_direction="left" hide_on_mobile="no" center_content="no" min_height="none"][32]; /* user login name */
+    char ut_user[32]; /* user login name */
     char ut_id[4]; /* inittab id */
     char ut_line[32]; /* device name (console, lnxx) */
     pid32_t ut_pid; /* process id */
@@ -164,4 +164,4 @@ xxxxxx ftp 0 DEAD_PROCESS ftp2xxx9 2xxx9 20xx 03 xx 03:00:00.000 x.xx.x.xx
 reboot ~   0 BOOT_TIME    system boot 0  20xx 03 xx 03:31:14.000
            0 RUN_LVL      run-level S 0  20xx 03 xx 03:31:30.000
 </code></pre>
-<p>분석에 도움이 되길 바란다 ;-)[/fusion_builder_column][/fusion_builder_row][/fusion_builder_container]</p>
+<p>분석에 도움이 되길 바란다 ;-)</p>
