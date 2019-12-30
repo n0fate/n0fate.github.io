@@ -5,7 +5,6 @@ date: 2019-12-30 22:10:00.000000000 +09:00
 type: post
 published: true
 status: publish
-categories: Digital Forensics
 tags: []
 author:
   login: n0fate
