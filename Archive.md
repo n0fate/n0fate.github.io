@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Docs
+title: Archive
 ---
 
 | 날짜 | 발표자료 | 이벤트 | 다운로드 |
