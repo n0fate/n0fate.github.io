@@ -57,4 +57,4 @@ Successfully disabled System Integrity Protection. Please restart the machine fo
 * 디스크 덤프 시에는 용량을 고려하여 분할압축을 하는 경우가 많은데, 이 경우 blackbag에서 해당 디스크를 마운트하지 못하는 문제를 가지고 있다. 이 문제를 해결하려면 ftkimager를 통해 하나의 읽기 전용 가상 디스크로 마운트하고 이를 blackbag에서 입력으로 받아 처리할 수 있다고 하니 참고하시기 바란다.
 
 ## Reference
-(System_Integrity_Protection_Guide)[https://developer.apple.com/library/archive/documentation/Security/Conceptual/System_Integrity_Protection_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016462-CH1-DontLinkElementID_15]
+[System_Integrity_Protection_Guide](https://developer.apple.com/library/archive/documentation/Security/Conceptual/System_Integrity_Protection_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016462-CH1-DontLinkElementID_15)
