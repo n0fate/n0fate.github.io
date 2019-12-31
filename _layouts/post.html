@@ -5,11 +5,12 @@ layout: default
 <div class="post">
   <div class="post-info">
     <span>Written by</span>
-    {% if page.author %}
+    <!-- {% if page.author %}
         {{ page.author }}
     {% else %}
         {{ site.author.name }}
-    {% endif %}
+    {% endif %} -->
+    {{ site.author.name }}
 
     {% if page.date %}
       <br>
