@@ -1,21 +1,41 @@
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
+# Site settings
+title:          Tale
+description:    "Minimal Jekyll theme for storytellers"
+baseurl:        "/tale"
+url:            "https://chesterhow.github.io"
 
-# Setup
-title:               n0fate Forensic Lab
-tagline:             'any security stuff'
-#description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 https://n0fate.github.io
-baseurl:             ''
-paginate:            5
+# Google Analytics
+google_analytics: UA—XXXXXXXX-X
 
-# About/contact
+# Author
 author:
-  name:              n0fate
-  url:               https://twitter.com/n0fate
-  email:             n0fate@n0fate.com
+  name:         Chester How
+  url:          https://chester.how
+  email:        chesterhow@gmail.com
 
-# Custom vars
-version:             1.0.0
+# Build settings
+markdown:       kramdown
+include:
+  - _pages
+
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
+
+# Gems
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  # - jemoji #Uncomment this to allow emoji in your post
+
+# Permalinks
+permalink:      /:year-:month-:day/:title
+paginate:       5
+
+# Excludes
+exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
+
+# Disqus (Set to your disqus id)
+disqus:         jekyll-tale
