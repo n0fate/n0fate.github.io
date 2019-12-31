@@ -21,7 +21,7 @@ SIP는 "Secure Integrity Protection"의 약어로 시스템의 주요 코드의 
 * macOS에 인가되지 않은(비 서명된) KEXT 로드 차단
 * 특정 디렉터리 내의 바이너리 임의 수정(쓰기) 차단
 * 특정 디렉터리와 시스템 파일의 컨텐츠 접근 차단
-  * System-Only Locations(File  System  Protections in System Integrity Protection Guide  by Apple)</strong>
+  * System-Only Locations(File  System  Protections in System Integrity Protection Guide  by Apple)
  	  * /bin
  	  * /sbin
  	  * /usr
