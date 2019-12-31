@@ -43,7 +43,3 @@ exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
 # Disqus (Set to your disqus id)
 disqus:         forensic
 comments: true
-
-social:
-  twitter:  n0fate
-  github:   n0fate
