@@ -1,4 +1,17 @@
---- layout: post title: Mac OS X Artifact (DS_Store) date: 2013-12-08 12:55:00.000000000 +09:00 type: post published: true status: publish categories: - OS Artifacts tags: - artifacts - ds_store author: login: n0fate email: rapfer@gmail.com display_name: n0fate first_name: '' last_name: '' ---
+---
+layout: post
+title: Mac OS X Artifact (DS_Store)
+date: 2013-12-08 12:55:00.000000000 +09:00
+type: post
+published: true
+status: publish
+categories:
+    - OS Artifacts
+tags:
+    - artifacts
+    - ds_store
+author: "n0fate"
+---
 
 Mac OS X를 많이 사용하다보면, 일반 사용자의 눈에는 보이진 않지만 사용자 폴더에 숨겨져 있는 파일이 하나 있다. 바로 ".DS_Store"라는 파일인데, Mac OS X를 사용한다면 터미널을 열어서 'ls -al' 명령으로 간단하게 확인할 수 있다.
 

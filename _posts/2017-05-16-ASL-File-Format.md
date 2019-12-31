@@ -8,10 +8,7 @@ status: publish
 categories:
 - Mac OS X Forensics
 tags: []
-author:
-  login: n0fate
-  email: rapfer@gmail.com
-  display_name: n0fate
+author: "n0fate"
 ---
 
 ## 정의

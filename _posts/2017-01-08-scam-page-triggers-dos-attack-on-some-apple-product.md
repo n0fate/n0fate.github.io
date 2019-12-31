@@ -8,10 +8,7 @@ status: publish
 categories:
 - Malware Analysis
 tags: []
-author:
-  login: n0fate
-  email: rapfer@gmail.com
-  display_name: n0fate
+author: "n0fate"
 ---
 
 *딱히 쓸만한 제목이 없어서 제목은 원 글 내용을 따옴*

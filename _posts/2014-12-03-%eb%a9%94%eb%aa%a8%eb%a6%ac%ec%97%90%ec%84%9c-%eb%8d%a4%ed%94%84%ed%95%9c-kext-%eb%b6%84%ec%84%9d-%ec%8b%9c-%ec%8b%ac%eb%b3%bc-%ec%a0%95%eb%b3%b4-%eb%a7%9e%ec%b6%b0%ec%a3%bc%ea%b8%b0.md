@@ -11,12 +11,7 @@ categories:
 tags:
 - IDA
 - KEXT
-author:
-  login: n0fate
-  email: rapfer@gmail.com
-  display_name: n0fate
-  first_name: ''
-  last_name: ''
+author: "n0fate"
 ---
 <h3 id="1.-서론"><a href="#1.-서론" name="1.-서론"></a>1. 서론</h3>
 <p>메모리에서 덤프한 파일을 IDA와 같은 디스어셈블러로 분석할 때 가장 곤란한 점은 제거된 임포트 함수 정보이다. 임포트 함수 정보는 심볼 테이블에 정의되어 있으며, 이 테이블에는 프로그램이 임포트할 라이브러리와 함수 이름이 정의되어 있다. 프로그램은 메모리에 로드되어 프로세스화 되는 과정에서 임포트 함수의 메모리 주소를 찾는데 이 테이블을 사용한다.</p>

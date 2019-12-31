@@ -12,12 +12,7 @@ tags:
 - incident response
 - malware
 - regin
-author:
-  login: n0fate
-  email: rapfer@gmail.com
-  display_name: n0fate
-  first_name: ''
-  last_name: ''
+author: "n0fate"
 ---
 <h2 id="침해-대응-관점의-regin-분석">I. 서론<br />
 <a href="#침해-대응-관점의-regin-분석" name="침해-대응-관점의-regin-분석"></a></h2>

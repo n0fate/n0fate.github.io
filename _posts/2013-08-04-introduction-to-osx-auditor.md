@@ -8,21 +8,7 @@ status: publish
 categories:
 - OS Artifacts
 tags: []
-meta:
-  blogger_blog: forensic.n0fate.com
-  blogger_author: Kyeongsik Lee
-  blogger_permalink: /2013/08/introduction-to-osx-auditor.html
-  _blogger_self: https://www.blogger.com/feeds/7620918615785302711/posts/default/7264905959214328514
-  _edit_last: '1'
-  _oembed_d69e8097cc08a244d4a8483691e48f76: '{{unknown}}'
-  avada_post_views_count: '1848'
-  fusion_builder_converted: 'yes'
-author:
-  login: n0fate
-  email: rapfer@gmail.com
-  display_name: n0fate
-  first_name: ''
-  last_name: ''
+author: "n0fate"
 ---
 <h3>1. 소개</h3>
 <p>최근에 Mac OS X 사용자가 많아지기도 했고, 윈도우 포렌식을 연구하는 사람이 많아져서인지 1~2년 사이에 OS X에 대한 포렌식 도구가 속속 등장하고 있다.</p>

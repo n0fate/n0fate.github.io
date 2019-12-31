@@ -13,12 +13,7 @@ tags:
 - malware
 - malware analysis
 - mumblehard
-author:
-  login: n0fate
-  email: rapfer@gmail.com
-  display_name: n0fate
-  first_name: ''
-  last_name: ''
+author: "n0fate"
 ---
 <p>mumblehard는 ESET에서 관리하는 블로그인 WeLiveSecurity를 통해 알려진 악성코드로 Linux와 FreeBSD를 둘 다 지원하는 멀티플랫폼 악성코드이다. <a href="http://www.welivesecurity.com/wp-content/uploads/2015/04/mumblehard.pdf" target="_blank">ESET에 있는 보고서</a>가 잘 정리되어 있으니 그 내용을 참조하기 바라며, 이 글에선 필자가 흥미롭게 본 부분만 정리한다. (사실 길게 쓰기 귀찮다..)<br />
 <a href="#mumblehard-특징-정리" name="mumblehard-특징-정리"></a></p>

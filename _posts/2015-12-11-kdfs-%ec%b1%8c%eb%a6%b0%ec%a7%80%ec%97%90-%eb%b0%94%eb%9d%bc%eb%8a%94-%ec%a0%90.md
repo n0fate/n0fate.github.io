@@ -9,12 +9,7 @@ categories:
 - Challenge &amp; Conference
 tags:
 - KDFS
-author:
-  login: n0fate
-  email: rapfer@gmail.com
-  display_name: n0fate
-  first_name: ''
-  last_name: ''
+author: "n0fate"
 ---
 <p><strong>참고로 본 글은 챌린지에 참여한 참여자나 출제팀을 무시하거나 비난하는 것이 아닌 고민해야할 점을 다룬 글입니다. 그 분들의 보고서는 제 것보다 뛰어났으며, 출제팀도 많은 고민을 통해 이러한 판단 기준을 세운 것으로 보입니다. :-)</strong></p>
 <h2>시작</h2>

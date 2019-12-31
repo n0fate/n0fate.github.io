@@ -12,12 +12,7 @@ tags:
 - Mac OS X
 - memory forensics
 - rootkit
-author:
-  login: n0fate
-  email: rapfer@gmail.com
-  display_name: n0fate
-  first_name: ''
-  last_name: ''
+author: "n0fate"
 ---
 <p id="os-x-/-bsd-커널-상태(kernel-state)-정보로-루트킷-식별하기">프로세스가 커널 모듈(e. 윈도는 디바이스 드라이버)와 통신할 때, IO Control / Kernel Event API를 이용하여 약속된 메시지를 전달/이벤트를 설정하고, 드라이버는 그 메시지를 핸들러에서 받아 그에 맞는 임무를 수행하는 구조를 가진다. 범용 운영체제로 알려진 시스템은 대부분 이러한 구조로 프로세스와 커널 모듈이 통신한다.<br />
 <a href="#os-x-/-bsd-커널-상태(kernel-state)-정보로-루트킷-식별하기" name="os-x-/-bsd-커널-상태(kernel-state)-정보로-루트킷-식별하기"></a></p>
