@@ -42,6 +42,17 @@ exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
 
 # Disqus (Set to your disqus id)
 disqus: forensic
-comments: true
 
 theme: jekyll-theme-modernist
+
+defaults:
+  # _posts
+  - scope:
+    path: ""
+    type: posts
+  values:
+    layout: post
+    published: true
+    status: publish
+    comments: true
+    share: true
