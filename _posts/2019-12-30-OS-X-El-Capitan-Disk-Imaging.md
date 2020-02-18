@@ -9,6 +9,7 @@ categories:
 - Digital Forensics
 tags: []
 author: "n0fate"
+comments: true
 ---
 
 본래 macOS(편의상 모든 운영체제는 이 이름으로 표기)의 디스크 이미징 방법은 리눅스의 그것과 동일하게 디스크 장치를 입력으로한 덤프 방법을 사용하였다. 그런데, 이 방법이 OS X Elcapitan 이후부터 문제가 발생하였다.
