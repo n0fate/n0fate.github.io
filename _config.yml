@@ -46,10 +46,6 @@ disqus: forensic
 theme: jekyll-theme-modernist
 
 defaults:
-  # _posts
-  - scope:
-    path: ""
-    type: posts
   values:
     layout: post
     published: true
