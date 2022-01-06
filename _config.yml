@@ -43,7 +43,7 @@ exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
 # Disqus (Set to your disqus id)
 disqus: forensic
 
-theme: jekyll-theme-modernist
+theme: jekyll-theme-hacker
 
 defaults:
   values:
