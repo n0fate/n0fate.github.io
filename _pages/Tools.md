@@ -3,6 +3,7 @@ layout: post
 title: "Tools"
 permalink: /tools/
 ---
+This page introduces the open-source tools that have been developed. Detailed information can be accessed by clicking the links next to each tool.
 
 # volafox - [link](https://github.com/n0fate/volafox)
 The `volafox` is a memory analysis tool designed to extract user or malicious behavior from physical memory images of macOS systems. This tool takes only a memory image as input, automatically identifies the operating system version, and performs analysis at a faster speed compared to other tools with similar functionality. It extracts volatile information from the operating system, including details related to malicious activities that manipulate memory information, as well as critical data required for digital forensic investigations, such as encryption keys. The detailed features of the tool are as follows:
