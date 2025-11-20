@@ -47,3 +47,75 @@ layout: default
 
   <a href="#" class="top">Top</a>
 </div>
+
+<div class="category-sidebar">
+  <h3>Categories</h3>
+  <ul>
+    {% for category in site.categories %}
+      <li>
+        <a href="{{ site.baseurl }}/category/#{{ category[0] | slugify }}">
+          {{ category[0] }} <small>({{ category[1] | size }})</small>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<style>
+  /* 스타일 정의 */
+  .category-sidebar {
+    position: fixed;       /* 화면에 고정 */
+    top: 150px;           /* 위에서부터의 거리 */
+    right: 20px;          /* 오른쪽 끝에서의 거리 */
+    width: 180px;         /* 너비 */
+    padding: 15px;
+    background-color: #fff;
+    border-left: 3px solid #3197f0; /* 포인트 컬러 (파란색 라인) */
+    font-size: 14px;
+    z-index: 1000;
+    
+    /* 그림자 효과로 떠있는 느낌 주기 */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+    border-radius: 5px;
+  }
+
+  .category-sidebar h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+  }
+
+  .category-sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .category-sidebar li {
+    margin-bottom: 8px;
+  }
+
+  .category-sidebar a {
+    text-decoration: none;
+    color: #666;
+    display: block;     /* 클릭 영역 넓히기 */
+    transition: color 0.2s;
+  }
+
+  .category-sidebar a:hover {
+    color: #3197f0;    /* 마우스 올렸을 때 색상 */
+    font-weight: bold;
+  }
+
+  /* 모바일(화면 폭 1100px 이하)에서는 숨기기 */
+  /* Lanyon 본문 폭을 고려했을 때 겹치지 않으려면 이 정도가 적당합니다 */
+  @media (max-width: 1200px) {
+    .category-sidebar {
+      display: none;
+    }
+  }
+</style>
