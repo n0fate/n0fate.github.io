@@ -17,7 +17,7 @@ Kernel privileges represent the ultimate level of control over an operating syst
 
 Once an attacker gains these privileges, they can patch code in kernel memory to inject malicious payloads. Since data processed by applications passes through the kernel during I/O operations, intercepting data entering the kernel is a critical objective for attackers.
 
-With each macOS version update, Apple integrates various security features. Starting with macOS Sequoia, **KTRR** and **SKVA** have been applied. This post explores these features and discusses methods for locating the modified kernel page tables.
+In response to these threats, Apple integrated advanced security features, including **KTRR** and **SKVA**, into macOS Sequoia. These enhancements, however, have rendered legacy techniques for kernel page table traversal obsolete. This article explores the underlying causes of this disruption and proposes a verified solution based on recent research.
 
 # Background
 
