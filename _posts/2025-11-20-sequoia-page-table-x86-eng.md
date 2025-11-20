@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Finding macOS Sequoia Kernel Page Tables (x86_64) (English)
+title: Methods for Retrieving Kernel Page Table Addresses in macOS Sequoia (x86_64) (English)
 date: 2025-11-20 13:39:00.000000000 +09:00
 type: post
 published: true
