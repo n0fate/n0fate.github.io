@@ -29,7 +29,7 @@ As a security specialist focused on Digital Forensics and Malware Analysis, I am
 ---
 
 #### 🏫 Education
-* **[Korea University/Information Security and ]** (2009.03 - 2011.02)
+* **[Korea UniversityInformation Management and Engineering]** (2009.03 - 2011.02)
     * [Information Security, Master]
     * [Research on Mac OS X Physical Memory Analysis]
 
