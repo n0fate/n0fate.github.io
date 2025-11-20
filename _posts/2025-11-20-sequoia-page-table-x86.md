@@ -1,6 +1,6 @@
 ---
 layout: post
-title: macOS 세콰이어 커널 페이지 테이블 찾기(x86_64)
+title: macOS 세콰이어에서 커널 페이지 테이블 주소를 찾는 방법(x86_64)
 date: 2025-11-20 11:16:00.000000000 +09:00
 type: post
 published: true
