@@ -57,11 +57,11 @@ Once the kernel's `pmap_init` function completes, the `kernel_task` process (PID
 
 In macOS Sequoia, the creation of page tables has changed due to KTRR, as described earlier. If you attempt to construct the page table by tracing `IdlePML4` as before, it will point to a completely incorrect address. Fundamentally, In macOS Sequoia, the page at the `BootPML4` address appears to be NULL, making it look unused. Why does this happen?
 
-Starting with macOS Sequoia, consistent with the KTRR description, the bootloader configures the `BootPML4` page table and uses it to configure `IdlePML4`. To elevate the Intel boot process to a level similar to Apple Silicon, the CPU's `CR0.WP` (Write-Protection) is enabled, and the page information within the `IdlePML4` page table is set to read-only. **Subsequently, the `BootPML4` page table is removed.** This is why the traditional method based on `BootPML4` is no longer possible.
+Starting with macOS Sequoia, consistent with the KTRR description, the bootloader configures the `BootPML4` page table and uses it to configure `IdlePML4`. To elevate the Intel boot process to a security level on Apple Silicon, Bootloader eanbles the `CR0.WP`, and the kernel page table is set to read-only(**Write XOR Execute**). **Subsequently, the `BootPML4` page table is removed.** This is why the traditional method based on `BootPML4` is no longer possible.
 
 # Methods for Locating Kernel Memory Page Tables
 
-As explained, the changes in kernel page table configuration made it impossible to trace page tables based on `BootPML4`. Based on an analysis of the XNU kernel source code (11417.140.69) and GPT assistance, I identified three methods to locate the page tables.
+As explained, the changes in kernel page table configuration made it impossible to trace page tables based on `BootPML4`. Based on an analysis of the XNU kernel source code (`xnu-11417.140.69`) and GPT assistance, I identified three methods to locate the page tables.
 
 ## 1. Finding via `KDP_JTAG_COREDUMP_T`
 
