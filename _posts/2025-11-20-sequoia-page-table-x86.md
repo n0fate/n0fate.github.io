@@ -171,10 +171,6 @@ struct pmap {
 n0fate@nMacBook-Pro14 volafox % python vol.py -i sequoia_sample/macOS\ 10.15-1.vmem -o system_profiler -v
 [+] Memory Image: sequoia_sample/macOS 10.15-1.vmem
 [+] Command: system_profiler
-Catfish Location : 0xeb84000
-locationOfDarwinString : 0xe61bda0
-Difference : 0xe61bda0 - 0xe61bda0 -> 0x0
-0xeb84920
 [+] Get Memory Image Information
  [-] Difference(Catfish Signature): 0
  [-] Valid Mac Linear File Format
