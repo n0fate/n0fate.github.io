@@ -208,3 +208,5 @@ We are now ready to perform memory analysis. (This is just the beginning...)
 1.  https://github.com/googleprojectzero/ktrw
 2.  https://googleprojectzero.blogspot.com/2019/10/ktrw-journey-to-build-debuggable-iphone.html
 3.  XNU Kernel 11417.140.69 (https://opensource.apple.com/releases)
+
+Translated by Gemini 3 ;)
