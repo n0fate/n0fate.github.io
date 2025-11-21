@@ -10,12 +10,45 @@ permalink: /about/
 As a security specialist focused on Digital Forensics and Malware Analysis, I am dedicated to delving into the deep inner workings of systems to hunt down concealed threats.
 
 ---
+<div class="social-links">
+  <a href="mailto:n0fate@n0fate.com" title="Email">
+    <i class="fas fa-envelope"></i>
+  </a>
+  
+  <a href="https://forensic.n0fate.com" title="Blog">
+    <i class="fas fa-house"></i>
+  </a>
 
-#### 📞 Contact & SNS
-* **Email**: [n0fate@n0fate.com](mailto:n0fate@n0fate.com)
-* **Blog**: [https://forensic.n0fate.com](https://forensic.n0fate.com)
-* **GitHub**: [https://github.com/n0fate](https://github.com/n0fate)
-* **X (Twitter)**: [https://x.com/n0fate](https://x.com/n0fate)
+  <a href="https://github.com/n0fate" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+
+  <a href="https://x.com/n0fate" title="X (Twitter)">
+    <i class="fa-brands fa-x-twitter"></i>
+  </a>
+</div>
+
+<style>
+  .social-links {
+    display: flex;
+    gap: 20px;               /* 아이콘 사이 간격 */
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 1.5rem;       /* 아이콘 크기 (조절 가능) */
+  }
+  
+  .social-links a {
+    color: #555;             /* 아이콘 기본 색상 (진한 회색) */
+    transition: color 0.3s;  /* 색상 변할 때 부드럽게 */
+    text-decoration: none;   /* 밑줄 제거 */
+    border-bottom: none;     /* Tale 테마 링크 밑줄 제거 */
+  }
+
+  /* 마우스 올렸을 때 색상 변경 */
+  .social-links a:hover {
+    color: #000;             /* 검은색으로 진해짐 */
+  }
+</style>
 
 ---
 
