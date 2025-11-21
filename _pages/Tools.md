@@ -41,7 +41,7 @@ Volafox retrieves critical volatile data from the OS, including artifacts of mem
 This collection features specialized tools developed to investigate artifacts related to Apple Continuity.
 
 ## iChainbreaker - [link](https://github.com/n0fate/ichainbreaker)
-**iChainbreaker** focuses on decrypting iCloud Keychain data, facilitating the retrieval of credentials synchronized from iOS devices. This tool allows forensic examiners to access and decrypt confidential information that originated on an iPhone and was propagated through the iCloud Keychain service.
+**iChainbreaker** focuses on decrypting iCloud Keychain data, facilitating the retrieval of credentials synchronized from iOS devices. This tool allows forensic examiners to decrypt confidential information synchronized from an iPhone to macOS via the iCloud Keychain service.
 
 ## Apple Call History Decryptor Tool - [link](https://github.com/n0fate/OS-X-Continuity/tree/master/Call%20History%20Decryptor)
 The **Apple Call History Decryptor** is engineered to decrypt call logs, including obscured phone numbers, that are synchronized across the cloud between iOS and macOS devices. It enables the forensic extraction of iPhone call history artifacts found on macOS. _Please note that successful decryption requires both devices to be associated with the same Apple ID._
