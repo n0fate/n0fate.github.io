@@ -167,7 +167,7 @@ struct pmap {
 
 이렇게 macOS 세콰이어의 커널 페이지 테이블을 구성하고 `system_profiler` 플러그인을 수행해봤더니 잘 나오는 것을 볼 수 있다.
 
-```shell
+```bash
 n0fate@nMacBook-Pro14 volafox % python vol.py -i sequoia_sample/macOS\ 10.15-1.vmem -o system_profiler -v
 [+] Memory Image: sequoia_sample/macOS 10.15-1.vmem
 [+] Command: system_profiler
