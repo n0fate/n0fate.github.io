@@ -5,11 +5,6 @@ layout: default
 <div class="post">
   <div class="post-info">
     <span>Written by</span>
-    <!-- {% if page.author %}
-        {{ page.author }}
-    {% else %}
-        {{ site.author.name }}
-    {% endif %} -->
     {{ site.author.name }}
 
     {% if page.date %}
@@ -37,3 +32,142 @@ layout: default
 
   <a href="#" class="top">Top</a>
 </div>
+
+<div id="toc-sidebar" class="toc-sidebar">
+  <div class="toc-header">Contents</div>
+  <ul id="toc-list"></ul>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var tocList = document.getElementById("toc-list");
+  var tocSidebar = document.getElementById("toc-sidebar");
+  
+  // 중요: .post 클래스 내부의 h1, h2, h3를 찾되, 맨 위 제목(.post-title)은 제외함
+  var headers = document.querySelectorAll(".post h1:not(.post-title), .post h2, .post h3");
+
+  // 목차 만들 헤더가 없으면 아예 숨김
+  if (headers.length === 0) {
+    tocSidebar.style.display = "none";
+    return;
+  }
+
+  headers.forEach(function(header, index) {
+    // ID가 없으면 자동 생성 (링크 연결용)
+    if (!header.id) {
+      header.id = "header-" + index;
+    }
+
+    var li = document.createElement("li");
+    var a = document.createElement("a");
+    
+    a.href = "#" + header.id;
+    a.textContent = header.textContent;
+    
+    // 태그(H1, H2, H3)에 따라 들여쓰기 클래스 적용
+    li.className = "toc-" + header.tagName.toLowerCase();
+    
+    li.appendChild(a);
+    tocList.appendChild(li);
+  });
+
+  // 스크롤 스파이 (현재 위치 하이라이트)
+  window.addEventListener("scroll", function() {
+    var fromTop = window.scrollY + 150; // 조금 더 여유있게 감지
+    
+    var currentHeader = null;
+    headers.forEach(function(header) {
+      if (header.offsetTop <= fromTop) {
+        currentHeader = header;
+      }
+    });
+
+    if (currentHeader) {
+      var activeLinks = tocList.querySelectorAll("a.active");
+      activeLinks.forEach(link => link.classList.remove("active"));
+      
+      var activeLink = tocList.querySelector('a[href="#' + currentHeader.id + '"]');
+      if (activeLink) {
+        activeLink.classList.add("active");
+      }
+    }
+  });
+});
+</script>
+
+<style>
+  /* 목차 컨테이너 스타일 */
+  .toc-sidebar {
+    position: fixed;
+    top: 150px;             /* 화면 위에서의 거리 */
+    left: 20px;             /* 화면 왼쪽에서의 거리 (조절 가능) */
+    width: 200px;           /* 목차 너비 */
+    max-height: 70vh;
+    overflow-y: auto;
+    z-index: 100;
+    font-family: "Pretendard", sans-serif; /* 폰트 적용 */
+  }
+  
+  .toc-header {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .toc-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: 1px solid #eee;
+  }
+
+  .toc-sidebar li {
+    margin-bottom: 4px;
+  }
+
+  .toc-sidebar a {
+    display: block;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.85rem;
+    padding: 2px 0 2px 15px;
+    transition: all 0.2s;
+    border-left: 2px solid transparent;
+    margin-left: -1px;
+    line-height: 1.4;
+  }
+
+  /* 마우스 올리거나 활성화됐을 때 */
+  .toc-sidebar a:hover,
+  .toc-sidebar a.active {
+    color: #333;
+    border-left-color: #333;
+    font-weight: 600;
+  }
+
+  /* 들여쓰기: H3는 조금 더 안쪽으로 */
+  .toc-h3 {
+    padding-left: 10px;
+    font-size: 0.8rem;
+  }
+
+  /* 반응형: 화면 폭이 1400px 이하(노트북 등)면 본문을 가릴 수 있으므로 숨김 */
+  @media (max-width: 1400px) {
+    .toc-sidebar {
+      display: none;
+    }
+  }
+  
+  /* 스크롤바 디자인 (크롬/사파리) */
+  .toc-sidebar::-webkit-scrollbar {
+    width: 3px;
+  }
+  .toc-sidebar::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 2px;
+  }
+</style>
