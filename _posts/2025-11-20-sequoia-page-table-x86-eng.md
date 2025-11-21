@@ -23,13 +23,13 @@ In response to these threats, Apple integrated advanced security features, inclu
 
 ## KTRR (Kernel Text Read-Only Region)
 
-In previous versions of macOS, the EFI bootloader applied ASLR to the kernel, mapped it to physical memory, configured the kernel's page tables, and set the CR3 register to point to them.
+In previous versions of macOS, the EFI bootloader applied ASLR to the kernel(KASLR), mapped it to physical memory, configured the kernel's page tables, and set the `CR3` register to point to them.
 
 KTRR is a security feature available on Apple's A10 chips and later, and it was introduced to macOS following the transition to M1 chips. In terms of actual code implementation, it appears to have been applied since macOS 10.14.
 
-The goal of KTRR is to make the kernel's code region read-only. The bootloader in EFI (`boot.efi`) configures the kernel's page tables *before* loading the kernel itself. The kernel image is loaded sequentially into physical memory, and the CR3 register is set to point to the page table address configured by the bootloader.
+The goal of KTRR is to make the kernel's code region read-only. The bootloader in EFI (`boot.efi`) configures the kernel's page tables *before* loading the kernel itself. The kernel image is loaded sequentially into physical memory, and the `CR3` register is set to point to the page table address configured by the bootloader.
 
-Through this method, the TEXT region of the kernel image is rendered read-only. Any attempt to forcibly modify these permissions results in a page fault.
+Through this method, the TEXT region of the kernel image is modified to read-only. So, if the attacker modify it, CPU occurs a page fault.
 
 ## SKVA (Static Kernel Virtual Addresses)
 
@@ -118,17 +118,17 @@ typedef struct lowglo {
 
 &nbsp;
 
-o obtain the value of kernel_pmap_pml4, follow these steps:
+To obtain the value of kernel_pmap_pml4, follow these steps:
 
-1. Locate the `lowGlo` structure using the existing Catfish signature.
-2. Calculate the kernel ASLR offset by finding the difference between the lowGlo kernel symbol address (& `LOW_4GB_MASK`) and the physical memory address where the signature is located.
-3. Add the calculated kernel ASLR offset to `lgKdpJtagCoredumpAddr` to find the location of `kdp_jtag_coredump_t`.
+1. Finding the locate the `lowGlo` structure using the existing `Catfish ` signature.
+2. Calculate the kernel ASLR offset by finding the difference between the `lowGlo` kernel symbol address (& `LOW_4GB_MASK`) and the physical memory address where the signature is located.
+3. Add the calculated kernel ASLR offset to `lgKdpJtagCoredumpAddr` kernel symbol address to find the location of actual `kdp_jtag_coredump_t`.
 4. Verify if the structure signature matches `PMUDEROC` (reverse of COREDUMP).
-5. Construct memory pages based on the `kernel_pmap_pml4` value to analyze kernel data structures.
+5. Construct memory page table based on the `kernel_pmap_pml4` value
 
-## Finding via `CPU_DATA_T` Structure
+## 2. Finding via `CPU_DATA_T` Structure
 
-The cpu_data_t structure contains CPU information. This method involves reading the `cpu_kernel_cr3` value within this structure to configure the page tables. By following `cpu_data_ptr`, you can locate pointers corresponding to the number of cores. By tracing one of these, you can construct the pages using the lower 4 bytes of `cpu_task_cr3` (at offset `0xE8`), `cpu_kernel_cr3` (next), or `cpu_ucr3` as an absolute value.
+The `cpu_data_t` structure contains CPU information. This method involves reading the `cpu_kernel_cr3` value within this structure to configure the page tables. By following `cpu_data_ptr`, I can locate pointers corresponding to the number of cores. By tracing one of these, I can construct the pages using the lower 4 bytes of `cpu_task_cr3` (at offset `0xE8`), `cpu_kernel_cr3` (0xf0), or `cpu_ucr3`(0xf8) as an absolute value.
 
 ```c
 struct cpu_data_t {
@@ -142,7 +142,7 @@ struct cpu_data_t {
 
 &nbsp;
 
-## Finding via `KERNEL_PMAP_STORE` Structure
+## 3. Finding via `KERNEL_PMAP_STORE` Structure
 This method involves interpreting the structure that holds information related to the Kernel PMAP(Physical Map). The structure is defined as follows:
 
 ```C
@@ -158,10 +158,10 @@ struct pmap {
 }
 ```
 
-You need to track the 4th value of this structure. In actual memory, four pointers starting at offset 0x40 contain these values (likely `pm_cr3`, `pm_ucr3`, `pm_pml4` (& `LOW_4GB_MASK`), and pm_umpl4 (&`LOW_4GB_MASK`) ). This implies the size of the lck_rw_t structure is 0x40 bytes, though this requires verification.
+In `pmap` structure, it has four value starting at offset 0x40 (likely `pm_cr3`, `pm_ucr3`, `pm_pml4` (& `LOW_4GB_MASK`), and pm_umpl4 (&`LOW_4GB_MASK`) ) contain page table address.
 
 # Experimental Result
-Since the existing code already locates the lowGlo structure via Catfish, I updated the code to reflect the page table discovery method based on the `KDP_JTAG_COREDUMP_T` structure.
+Since the existing code already locates the `lowGlo` structure via `Catfish ` signature, I updated the code to test the page table discovery method based on the `KDP_JTAG_COREDUMP_T` structure.
 
 After configuring the macOS Sequoia kernel page tables this way and running the `system_profiler` plugin, the results are successfully displayed:
 
