@@ -145,7 +145,7 @@ struct cpu_data_t {
 ## 3. Finding via `KERNEL_PMAP_STORE` Structure
 This method involves interpreting the structure that holds information related to the Kernel PMAP(Physical Map). The structure is defined as follows:
 
-```C
+```c
 // osfmk/i386/pmap.h
 struct pmap {
     lck_rw_t        pmap_rwl __attribute((aligned(64)));
@@ -165,7 +165,7 @@ Since the existing code already locates the `lowGlo` structure via `Catfish ` si
 
 After configuring the macOS Sequoia kernel page tables this way and running the `system_profiler` plugin, the results are successfully displayed:
 
-```shell
+```bash
 n0fate@nMacBook-Pro14 volafox % python vol.py -i sequoia_sample/macOS\ 10.15-1.vmem -o system_profiler -v
 [+] Memory Image: sequoia_sample/macOS 10.15-1.vmem
 [+] Command: system_profiler
