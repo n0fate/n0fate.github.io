@@ -96,16 +96,30 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 <style>
-  /* 목차 컨테이너 스타일 */
+/* === [1] 제목 크기 조절 (요청하셨던 부분) === */
+  .post-title {
+    font-size: 2.2rem !important;
+    letter-spacing: -0.05rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  /* 모바일에서는 제목 더 작게 */
+  @media (max-width: 768px) {
+    .post-title {
+      font-size: 1.6rem !important;
+    }
+  }
+
+  /* === [2] 목차(TOC) 스타일 === */
   .toc-sidebar {
     position: fixed;
-    top: 150px;             /* 화면 위에서의 거리 */
-    left: 40px;             /* 화면 왼쪽에서의 거리 (조절 가능) */
-    width: 200px;           /* 목차 너비 */
+    top: 150px;
+    left: 20px;
+    width: 220px;
     max-height: 70vh;
     overflow-y: auto;
     z-index: 100;
-    font-family: "Pretendard", sans-serif; /* 폰트 적용 */
+    font-family: "Pretendard", sans-serif;
   }
   
   .toc-header {
@@ -126,61 +140,72 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   .toc-sidebar li {
-    margin-bottom: 4px;
+    margin: 0;
   }
 
   .toc-sidebar a {
     display: block;
     text-decoration: none;
     color: #999;
-    font-size: 0.85rem;
-    padding: 2px 0 2px 15px;
     transition: all 0.2s;
     border-left: 2px solid transparent;
     margin-left: -1px;
-    line-height: 1.4;
+    line-height: 1.5;
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
+
+  /* --- [핵심] 계층별 들여쓰기 설정 --- */
+  
+  /* H1, H2: 대주제 (들여쓰기 없음, 굵게) */
+  .toc-h1 a, 
+  .toc-h2 a {
+    padding-left: 15px;      /* 기본 여백 */
+    font-size: 0.85rem;
+    font-weight: 600;        /* 조금 두껍게 */
+  }
+
+  /* H3: 소주제 (들여쓰기 추가) */
+  .toc-h3 a {
+    padding-left: 30px;      /* 안쪽으로 더 들어감 */
+    font-size: 0.8rem;       /* 글자 약간 작게 */
+    font-weight: 400;
+  }
+
+  /* H4: 더 깊은 주제 (혹시 쓸 경우를 대비) */
+  .toc-h4 a {
+    padding-left: 45px;
+    font-size: 0.75rem;
+    color: #bbb;
+  }
+
+  /* ----------------------------------- */
 
   /* 마우스 올리거나 활성화됐을 때 */
   .toc-sidebar a:hover,
   .toc-sidebar a.active {
     color: #333;
     border-left-color: #333;
-    font-weight: 600;
+  }
+  
+  /* H3 이하가 활성화되면 글자색만 진하게 (굵기는 유지) */
+  .toc-h3 a.active {
+    font-weight: 500;
   }
 
-  /* 들여쓰기: H3는 조금 더 안쪽으로 */
-  .toc-h3 {
-    padding-left: 10px;
-    font-size: 0.8rem;
-  }
-
-  /* 반응형: 화면 폭이 1400px 이하(노트북 등)면 본문을 가릴 수 있으므로 숨김 */
+  /* 반응형: 화면 좁을 때 숨김 */
   @media (max-width: 1400px) {
     .toc-sidebar {
       display: none;
     }
   }
   
-  /* 스크롤바 디자인 (크롬/사파리) */
+  /* 스크롤바 디자인 */
   .toc-sidebar::-webkit-scrollbar {
     width: 3px;
   }
   .toc-sidebar::-webkit-scrollbar-thumb {
     background-color: #ddd;
     border-radius: 2px;
-  }
-  /* 게시글 제목 크기 조절 */
-  .post-title {
-    font-size: 2.5rem !important; /* 기본값이 보통 3rem 이상입니다. 2~2.5 정도로 줄여보세요 */
-    letter-spacing: -0.05rem;     /* 자간을 살짝 좁히면 더 단정해 보입니다 */
-    margin-bottom: 1rem;          /* 제목과 본문 사이 간격 */
-  }
-
-  /* 모바일에서는 더 작게 보이도록 설정 */
-  @media (max-width: 768px) {
-    .post-title {
-      font-size: 1.8rem !important;
-    }
   }
 </style>
