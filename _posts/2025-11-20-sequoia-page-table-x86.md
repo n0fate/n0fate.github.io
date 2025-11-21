@@ -120,11 +120,11 @@ typedef struct lowglo {
 
 즉, 우리가 `kernel_pmap_pml4`의 값을 획득하기 위해서는 다음과 같은 순서를 따른다.
 
-1.  기존의 Catfish 시그니처를 이용하여 lowGlo 구조체를 찾는다.
-2.  lowGlo의 커널 심볼 주소(와 `LOW_4GB_MASK`를 AND 연산한 값)와 시그니처가 위치한 물리 메모리 주소의 차이를 계산하여 kernel aslr offset을 산출한다.
-3.  산출된 kernel aslr offset과 `lgKdpJtagCoredumpAddr`를 더한 값의 위치가 `kdp_jtag_coredump_t` 의 위치가 된다.
-4.  구조체의 시그니처 `PMUDEROP` (COREDUMP의 역순)인지 확인한다.
-5.  `kernel_pmap_pml4` 값을 토대로 메모리 페이지를 구성하여 커널 자료형을 분석한다.
+1.  `Catfish ` 시그니처를 이용하여 lowGlo 구조체를 찾는다.
+2.  lowGlo의 커널 심볼 주소(와 `LOW_4GB_MASK`를 AND 연산한 값)와 시그니처가 위치한 물리 메모리 주소의 차이를 계산하여 kernel aslr offset 값을 산출한다.
+3.  산출된 kernel aslr offset과 `lgKdpJtagCoredumpAddr`를 더한 값의 위치가 `kdp_jtag_coredump_t` 구조체의 위치가 된다.
+4.  구조체의 시그니처 `PMUDEROC` (COREDUMP의 역순)인지 확인한다.
+5.  `kernel_pmap_pml4` 값을 토대로 메모리 페이지를 구성한다.
 
 ## CPU_DATA_T 구조체에서 획득
 
@@ -146,7 +146,7 @@ struct cpu_data_t {
 
 커널 PMAP과 관련된 정보를 가지는 구조체를 해석하여 획득하는 방법이다. 구조체를 보면 아래와 같이 구성된다.
 
-```C
+```c
 // osfmk/i386/pmap.h
 struct pmap {
     lck_rw_t        pmap_rwl __attribute((aligned(64)));
@@ -163,9 +163,9 @@ struct pmap {
 
 # 실험 결과
 
-기존 코드가 이미 Catfish를 통해 lowGlo 구조체를 찾아내므로 해당 구조체 기반의 페이지 테이블 탐색 방법인KDP_JTAG_COREDUMP_T 구조체의 정보를 기반으로 코드 반영하였다.
+기존 코드가 이미 `Catfish ` 시그니처를 통해 lowGlo 구조체를 찾아내므로 해당 구조체 기반의 페이지 테이블 탐색 방법인 `KDP_JTAG_COREDUMP_T` 구조체의 정보를 기반으로 코드 반영하였다.
 
-이렇게 macOS 세콰이어의 커널 페이지 테이블을 구성하고 system_profiler 플러그인을 수행해봤더니 잘 나오는 것을 볼 수 있다.
+이렇게 macOS 세콰이어의 커널 페이지 테이블을 구성하고 `system_profiler` 플러그인을 수행해봤더니 잘 나오는 것을 볼 수 있다.
 
 ```shell
 n0fate@nMacBook-Pro14 volafox % python vol.py -i sequoia_sample/macOS\ 10.15-1.vmem -o system_profiler -v
