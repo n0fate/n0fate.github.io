@@ -112,9 +112,9 @@ permalink: /archive/
 
 | Date | Topic / Event | Data |
 | :--- | :--- | :---: |
-| 10.13 | <span class="badge bg-mac">Forensics</span> 맥 포렌식을 통한 아이폰 아티팩트 분석 기법 <br><small style="color:#888">한국정보보호학회 학회지</small> | - |
+| 10.13 | <span class="badge bg-for">Forensics</span> 맥 포렌식을 통한 아이폰 아티팩트 분석 기법 <br><small style="color:#888">한국정보보호학회 학회지</small> | - |
 | 09.26 | <span class="badge bg-mal">Malware</span> 악성코드 프로파일링 <br><small style="color:#888">국방부</small> | - |
-| 09.21 | <span class="badge bg-mac">Forensics</span> macOS 자동실행 아티팩트 분석 <br><small style="color:#888">Forensic Insight (Offline)</small> | <a href="https://github.com/n0fate/contents/blob/master/160921_macOS%20자동실행%20아티팩트%20분석.pdf" class="download-icon" target="_blank"><i class="fas fa-file-arrow-down"></i></a> |
+| 09.21 | <span class="badge bg-for">Forensics</span> macOS 자동실행 아티팩트 분석 <br><small style="color:#888">Forensic Insight (Offline)</small> | <a href="https://github.com/n0fate/contents/blob/master/160921_macOS%20자동실행%20아티팩트%20분석.pdf" class="download-icon" target="_blank"><i class="fas fa-file-arrow-down"></i></a> |
 | 05.12 | <span class="badge bg-for">Memory</span> 메모리 포렌식 <br><small style="color:#888">국방부</small> | - |
 | 03.05 | <span class="badge bg-win">Memory</span> 실전 윈도 악성코드 메모리 분석 <br><small style="color:#888">FIOS 2016 #3</small> | <a href="https://github.com/n0fate/contents/blob/master/FI_실전-윈도-악성코드-메모리-분석_160305.pdf" class="download-icon" target="_blank"><i class="fas fa-file-arrow-down"></i></a> |
 
