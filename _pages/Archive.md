@@ -105,7 +105,7 @@ permalink: /archive/
 | :--- | :--- | :---: |
 | 11.26 | <span class="badge bg-mal">CyberWar</span> 군사 강대국의 사이버 첩보 기술 동향 | - |
 | 10.26 | <span class="badge bg-for">Forensics</span> macOS File Quarantine Analysis <br><small style="color:#888">Forensic Insight (Offline)</small> | - |
-| 06.18 | <span class="badge bg-mal">Malware</span> 악성코드 동적 분석 기법 우회 방법 및 대응 방안 연구 <br><small style="color:#888">한국컴퓨터종합학술대회(우수논문)</small> | - |
+| 06.18 | <span class="badge bg-mal">Malware</span> 악성코드 동적 분석 기법 우회 방법 및 대응 방안 연구<i class="fas fa-trophy" style="color:#f1c40f; margin-left:5px;"></i> <br><small style="color:#888">한국컴퓨터종합학술대회</small> | - |
 
 
 <h2 class="year-header">2016</h2>
