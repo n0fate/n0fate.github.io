@@ -53,7 +53,7 @@ As a security specialist focused on Digital Forensics and Malware Analysis, I am
 ---
 
 #### 🛠 Skills
-* **Languages**: C/C++, Python, Assembly (x86/64, ARM), Swift
+* **Languages**: C/C++, Python, Assembly (x86/64, ARM)
 * **Core Competencies**: 
     * macOS/iOS Kernel Internals & Forensics
     * Memory Forensics (Volatile Memory Analysis)
