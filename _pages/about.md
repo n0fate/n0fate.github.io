@@ -5,7 +5,6 @@ permalink: /about/
 ---
 
 ### [Kyeongsik Lee / n0fate]
-**[Researcher at Agency for Defense Development]**
 
 As a security specialist focused on Digital Forensics and Malware Analysis, I am dedicated to delving into the deep inner workings of systems to hunt down concealed threats.
 
@@ -75,7 +74,6 @@ As a security specialist focused on Digital Forensics and Malware Analysis, I am
 ---
 
 #### 🏆 Honors & Awards
-* **2017.08.06** : Bronze Award, Defense Science Award (Agency for Defense Development, South Korea)
 * **2011.04.05** : Achievement Award, CODEGATE 2011 (Korea Internet & Security Agency, South Korea)
 * **2010.10.02** : IMPACT Winner and Grand Champion, DC3 Digital Forensic Challenge 2010 (DoD Cyber Crime Center, USA)
 * **2010.04.08** : Achievement Award, CODEGATE 2010 (Minister of Knowledge Economy, South Korea)
